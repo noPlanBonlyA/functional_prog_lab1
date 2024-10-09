@@ -66,7 +66,7 @@
 * Хвостовая рекурсия(solveTailRecursive method)
 * Модульное решение со свертской(solveWithFilter method)
 * Использование бесконечного массива(solveWithInfiniteLists method)
-* 
+
 Решение другим языком программирования:
 ```python
 def count_divisors(n):
