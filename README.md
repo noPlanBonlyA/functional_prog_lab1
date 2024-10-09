@@ -57,6 +57,35 @@
 
 -------------------------------------------------------------
 Решение проблемы №12
+----------
+Для ее решения этой проблемы, я создал две вспомогательные функции triangleNumbers и countDivisors, для перебора треугольных чисел и для подсчета делителей у данного числа. А так решения рекурсией, хвостовой рекурсией, с использованием filter и с использованием map в файле Solutions.
+Полноей название методов: 
+*Рекурсия(solveRecursion method)
+*Хвостовая рекурсия(solveTailRecursive method)
+*Модульное решение со свертской(solveWithFilter method)
+*Использование бесконечного массива(solveWithInfiniteLists method)
+Решение другим языком программирования:
+/python
+def count_divisors(n):
+    count = 0
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            count += 2 if i * i != n else 1
+    return count
+
+def find_triangle_number_with_over_500_divisors():
+    n = 1
+    triangle_number = 1
+    while True:
+        if count_divisors(triangle_number) > 500:
+            return triangle_number
+        n += 1
+        triangle_number += n
+
+result = find_triangle_number_with_over_500_divisors()
+print(f"Первое треугольное число с более чем 500 делителями: {result}")
+/python
+
 
 -------------------------------------------------------------
 Решение проблемы №19
