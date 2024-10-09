@@ -27,6 +27,7 @@ library
   exposed-modules:
       Lib
       Solutions
+      Solutions.Originals
   other-modules:
       Paths_lab1
   autogen-modules:
