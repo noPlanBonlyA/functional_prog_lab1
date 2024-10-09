@@ -65,7 +65,7 @@
 *Модульное решение со свертской(solveWithFilter method)
 *Использование бесконечного массива(solveWithInfiniteLists method)
 Решение другим языком программирования:
-/python
+```python
 def count_divisors(n):
     count = 0
     for i in range(1, int(math.sqrt(n)) + 1):
@@ -84,7 +84,7 @@ def find_triangle_number_with_over_500_divisors():
 
 result = find_triangle_number_with_over_500_divisors()
 print(f"Первое треугольное число с более чем 500 делителями: {result}")
-/python
+```
 
 
 -------------------------------------------------------------
