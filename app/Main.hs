@@ -9,5 +9,8 @@ main = do
     putStrLn $ "Рекурсивное решение: " ++ show (solveRecursive n)
     putStrLn $ "Решение с использованием filter: " ++ show (solveWithFilter n)
     
-    -- Добавляем вывод результата функции countFirstSundays
-    putStrLn $ "Количество первых воскресений месяца с 1901 по 2000 год: " ++ show countFirstSundays
+    putStrLn $ "Количество первых воскресений месяца с 1901 по 2000 год:"
+    putStrLn $ "  - Исходное решение: " ++ show countFirstSundays
+    putStrLn $ "  - Рекурсивное решение: " ++ show (countFirstSundaysRecursive 1901 0)
+    putStrLn $ "  - Решение с использованием fold: " ++ show countFirstSundaysWithFold
+    putStrLn $ "  - Решение с использованием map: " ++ show countFirstSundaysWithMap
