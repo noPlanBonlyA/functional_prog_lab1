@@ -59,11 +59,14 @@
 Решение проблемы №12
 ----------
 Для ее решения этой проблемы, я создал две вспомогательные функции triangleNumbers и countDivisors, для перебора треугольных чисел и для подсчета делителей у данного числа. А так решения рекурсией, хвостовой рекурсией, с использованием filter и с использованием map в файле Solutions.
+
 Полноей название методов: 
-*Рекурсия(solveRecursion method)
-*Хвостовая рекурсия(solveTailRecursive method)
-*Модульное решение со свертской(solveWithFilter method)
-*Использование бесконечного массива(solveWithInfiniteLists method)
+
+* Рекурсия(solveRecursion method)
+* Хвостовая рекурсия(solveTailRecursive method)
+* Модульное решение со свертской(solveWithFilter method)
+* Использование бесконечного массива(solveWithInfiniteLists method)
+* 
 Решение другим языком программирования:
 ```python
 def count_divisors(n):
