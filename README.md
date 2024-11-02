@@ -57,6 +57,79 @@
 
 -------------------------------------------------------------
 Решение проблемы №12
+----------
+Для решения этой проблемы, я создал две вспомогательные функции triangleNumbers и countDivisors, для перебора треугольных чисел и для подсчета делителей у данного числа. А так решения рекурсией, хвостовой рекурсией, с использованием filter и с использованием map в файле Solutions.hs
+
+Полноей название методов: 
+
+* Рекурсия(solveRecursion method)
+* Хвостовая рекурсия(solveTailRecursive method)
+* Модульное решение со свертской(solveWithFilter method)
+* Использование бесконечного массива(solveWithInfiniteLists method)
+
+
+Решение другим языком программирования(python):
+``` python
+def count_divisors(n):
+    count = 0
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            count += 2 if i * i != n else 1
+    return count
+
+def find_triangle_number_with_over_500_divisors():
+    n = 1
+    triangle_number = 1
+    while True:
+        if count_divisors(triangle_number) > 500:
+            return triangle_number
+        n += 1
+        triangle_number += n
+
+result = find_triangle_number_with_over_500_divisors()
+print(f"Первое треугольное число с более чем 500 делителями: {result}")
+```
+
 
 -------------------------------------------------------------
 Решение проблемы №19
+
+Для решения этой проблемы, я предоставил так же 4 функции: обычным методом, рекурсией,  с помощью Fold, с помощью map, все решения в том же фалйе Solutions.hs
+
+Полное название методов,
+
+* Рекурсия(countFirstSundayRecursive method)
+* Хвостовая рекурсия(solveTailRecursive method)
+* Модульное решение со свертской(countFirstSundaysWithFold method)
+* Использование бесконечного массива(countFirstSundaysWithMap method)
+
+
+Решение другим языком программирования(python):
+``` python
+from datetime import date, timedelta
+import math
+
+def is_leap_year(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+def days_in_month(year, month):
+    if month in [4, 6, 9, 11]:
+        return 30
+    elif month == 2:
+        return 29 if is_leap_year(year) else 28
+    else:
+        return 31
+
+current_date = date(1901, 1, 1)
+end_date = date(2000, 12, 31)
+
+sundays_count = 0
+
+while current_date <= end_date:
+    if current_date.weekday() == 6 and current_date.day == 1:
+        sundays_count += 1
+    
+    current_date += timedelta(days=1)
+
+print(f"Количество воскресений, выпавших на первое число месяца в 20-м веке: {sundays_count}")
+```
