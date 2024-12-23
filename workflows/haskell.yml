@@ -3,7 +3,7 @@ name: Markdown CI
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - ".github/workflows/*"
       - ".haskell.yaml"
